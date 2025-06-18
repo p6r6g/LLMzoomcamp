@@ -11,3 +11,18 @@ Document search and Q&A tools
 AI assistants with memory
 Custom APIs powered by LLMs
 Interactive LLM app
+ 
+
+
+docker run -p 6333:6333 -p 6334:6334 \
+   -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+   qdrant/qdrant 
+
+
+
+Check for stuck containers:
+docker ps -a
+
+
+Remove all stopped containers:
+docker container prune -f
